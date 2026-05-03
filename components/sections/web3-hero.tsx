@@ -22,31 +22,30 @@ export function Web3Hero() {
       {/* Hero Content */}
       <div className="relative z-20 flex flex-col items-center justify-center w-full px-6 pt-[200px] md:pt-[280px] pb-[102px]">
         
-        {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-[20px] bg-white/10 border border-white/20 mb-10 backdrop-blur-sm">
           <div className="w-1 h-1 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
           <span className="text-[13px] font-medium text-white/60">
-            Early access available from
+            Welcome to the new
           </span>
           <span className="text-[13px] font-medium text-white">
-            May 1, 2026
+            TechEd Tracker
           </span>
         </div>
 
         {/* Heading */}
         <h1 className="text-center text-[36px] md:text-[56px] font-medium leading-[1.28] tracking-tight max-w-[613px] text-gradient-144 mb-6">
-          Web3 at the Speed of Experience
+          Elevate Your Academic Projects
         </h1>
 
         {/* Subtitle */}
         <p className="text-center text-[15px] font-normal text-white/70 max-w-[680px] leading-relaxed mb-10">
-          Powering seamless experiences and real-time connections, EOS is the base for creators who move with purpose, leveraging resilience, speed, and scale to shape the future.
+          A comprehensive platform for students and guides to collaborate seamlessly. Track progress, discover the latest tech news, and dive into cutting-edge research.
         </p>
 
         {/* CTA Button */}
         <Link href="/auth/login">
           <button className="pill-glow-light text-black text-[14px] font-medium px-[29px] py-[11px] transition-transform hover:scale-105 active:scale-95 shadow-[0_4px_14px_0_rgba(255,255,255,0.39)]">
-            Join Waitlist
+            Get Started
           </button>
         </Link>
       </div>
