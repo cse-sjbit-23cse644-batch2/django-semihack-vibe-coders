@@ -65,7 +65,7 @@ export default async function HomePage() {
 
   return (
     <main className="min-h-screen bg-black text-white font-general-sans">
-      <Web3Navbar />
+      <Web3Navbar user={user} />
       <Web3Hero />
       <div className="bg-background text-foreground">
         <FeaturesSection />

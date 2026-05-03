@@ -24,28 +24,20 @@ export function Web3Hero() {
         
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-[20px] bg-white/10 border border-white/20 mb-10 backdrop-blur-sm">
           <div className="w-1 h-1 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
-          <span className="text-[13px] font-medium text-white/60">
-            Welcome to the new
-          </span>
-          <span className="text-[13px] font-medium text-white">
-            TechEd Tracker
+          <span className="text-[13px] font-medium text-white/90">
+            Jai Sri Gurudev
           </span>
         </div>
 
         {/* Heading */}
-        <h1 className="text-center text-[36px] md:text-[56px] font-medium leading-[1.28] tracking-tight max-w-[613px] text-gradient-144 mb-6">
-          Elevate Your Academic Projects
+        <h1 className="text-center text-[36px] md:text-[56px] font-medium leading-[1.28] tracking-tight max-w-[613px] text-gradient-144 mb-10">
+          Welcome to TechEd SJBITS Student Tracking
         </h1>
-
-        {/* Subtitle */}
-        <p className="text-center text-[15px] font-normal text-white/70 max-w-[680px] leading-relaxed mb-10">
-          A comprehensive platform for students and guides to collaborate seamlessly. Track progress, discover the latest tech news, and dive into cutting-edge research.
-        </p>
 
         {/* CTA Button */}
         <Link href="/auth/login">
           <button className="pill-glow-light text-black text-[14px] font-medium px-[29px] py-[11px] transition-transform hover:scale-105 active:scale-95 shadow-[0_4px_14px_0_rgba(255,255,255,0.39)]">
-            Get Started
+            Login
           </button>
         </Link>
       </div>

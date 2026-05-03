@@ -1,8 +1,20 @@
 'use client'
 
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { createClient } from '@/lib/supabase/client'
+import type { User as SupabaseUser } from '@supabase/supabase-js'
 
-export function Web3Navbar() {
+export function Web3Navbar({ user }: { user?: SupabaseUser | null }) {
+  const router = useRouter()
+
+  const handleSignOut = async () => {
+    const supabase = createClient()
+    await supabase.auth.signOut()
+    router.push('/')
+    router.refresh()
+  }
+
   return (
     <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-[120px] py-[20px] font-general-sans">
       {/* Left side: Logo and Links */}
@@ -14,26 +26,33 @@ export function Web3Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-[30px]">
           <Link href="/news" className="text-white text-[14px] font-medium flex items-center hover:text-white/80 transition-colors">
             Tech News
           </Link>
           <Link href="/research" className="text-white text-[14px] font-medium flex items-center hover:text-white/80 transition-colors">
-            Research
+            Research Articles
           </Link>
-          <Link href="/dashboard" className="text-white text-[14px] font-medium flex items-center hover:text-white/80 transition-colors">
-            Dashboard
-          </Link>
+          {user && (
+            <Link href="/dashboard" className="text-white text-[14px] font-medium flex items-center hover:text-white/80 transition-colors">
+              Dashboard
+            </Link>
+          )}
         </div>
       </div>
 
       {/* Right side: Button */}
-      <Link href="/auth/login">
-        <button className="pill-glow-dark text-white text-[14px] font-medium px-[29px] py-[11px] transition-transform hover:scale-105 active:scale-95">
-          Login / Register
+      {user ? (
+        <button onClick={handleSignOut} className="pill-glow-dark text-white text-[14px] font-medium px-[29px] py-[11px] transition-transform hover:scale-105 active:scale-95">
+          Sign Out
         </button>
-      </Link>
+      ) : (
+        <Link href="/auth/login">
+          <button className="pill-glow-dark text-white text-[14px] font-medium px-[29px] py-[11px] transition-transform hover:scale-105 active:scale-95">
+            Login or Sign Up
+          </button>
+        </Link>
+      )}
     </nav>
   )
 }
