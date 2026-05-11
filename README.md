@@ -1,6 +1,6 @@
 # Django-semihack-starter
 Starter template for semi-hackathon
-# 🚀 Django Semi-Hackathon: [Team Name]
+# 🚀 Django Semi-Hackathon:VIBE CODERS
 
 ## 📋 Project Details
 - **Theme**: [e.g., TH-03: Elective Choice System]
